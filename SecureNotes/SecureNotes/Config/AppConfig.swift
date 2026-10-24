@@ -8,6 +8,5 @@
 import Foundation
 
 enum AppConfig {
-    static let apiKey = "demo_secret_key_123456"
-    static let baseURL = "http://example.com/api"
+    static let baseURL = "https://example.com/api"
 }
