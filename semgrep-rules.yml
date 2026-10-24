@@ -1,0 +1,21 @@
+rules:
+  - id: swift-hardcoded-api-key
+    languages:
+      - swift
+    severity: ERROR
+    message: "Hardcoded API key detected."
+    pattern-regex: 'apiKey\s*=\s*"[^"]+"'
+
+  - id: swift-insecure-http
+    languages:
+      - swift
+    severity: WARNING
+    message: "Insecure HTTP URL detected. Use HTTPS."
+    pattern-regex: '"http://[^"]+"'
+
+  - id: swift-password-logging
+    languages:
+      - swift
+    severity: ERROR
+    message: "Sensitive password data is written to logs."
+    pattern-regex: 'print\s*\(\s*"Login password:\s*\\\([^)]*\)"\s*\)'
